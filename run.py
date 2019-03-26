@@ -16,7 +16,18 @@ print(convert_raw_reading(q, rg))
 print(convert_voltage_to_temp(convert_raw_reading(q, rg), 9800,5))
 
 display = lights.Lineup((11, 13, 15, 16, 18))
-for i in range(1,6):
-    display.luminate(i)
-    time.sleep(2)
-    display.darken(i)
+if sys.argv[1] == 'meter':
+    min, max = (4600, 17050)
+    
+    while True:
+        
+elif sys.arg[1] == 'dark':
+    for i in range(6):
+        display.darken(i)   
+     for i in range(6):
+        display.luminate(i)
+        time.sleep(.23)
+        display.darken(i)   
+    
+else:
+    while True:
