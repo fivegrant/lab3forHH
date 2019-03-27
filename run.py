@@ -19,7 +19,7 @@ temp = int(convert_voltage_to_temp(convert_raw_reading(q, rg), 9800,5))
 display = lights.Lineup((11, 13, 15, 16, 18))
 
 if sys.argv[1] == 'meter':
-    min, max = (5,35)
+    min, max = (20,35)
     limits = (min,(min + ((min+max)/2))/2,(min+max)/2, 
      (max + ((min+max)/2))/2, max)
     while True:
